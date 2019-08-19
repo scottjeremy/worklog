@@ -1,10 +1,10 @@
-### 老生常谈之TypeScript（一）基础类型
+# 老生常谈之TypeScript（一）基础类型
 
 写这系列就是想系统地再学一遍TypeScript
 
-#### TypeScript 基础类型
+## TypeScript 基础类型
 
-##### 数字类型： number
+### 数字类型： number
 
 双精度64位浮点值。它可以用来表示整数和分数。
 
@@ -15,7 +15,7 @@ let decLiteral: number = 6;    // 十进制
 let hexLiteral: number = 0xf00d;    // 十六进制
 ```
 
-##### 字符串类型： string
+### 字符串类型： string
 
 一个字符系列，支持模板字符串
 
@@ -25,7 +25,7 @@ let age: number = 24;
 let words: string = `Hello， my name is ${name}. I'm ${age} year old`;
 ```
 
-##### 布尔类型： boolean
+### 布尔类型： boolean
 
 表示逻辑值： true 和 fale。
 
@@ -33,7 +33,7 @@ let words: string = `Hello， my name is ${name}. I'm ${age} year old`;
 let isDone: boolean = true;
 ```
 
-##### 数组类型： Array
+### 数组类型： Array
 
 声明变量为数组。
 
@@ -45,7 +45,7 @@ let arr: number[] = [1, 2];
 let arr: Array<number> = [1, 2];
 ```
 
-##### 元组： 无
+### 元组： 无
 
 元组类型用来表示已知元素数量和类型的数组，各元素的类型不必相同，对应位置的类型需要相同。
 
@@ -56,7 +56,7 @@ x = [24, 'Scott']; // 报错
 console.log(x[0]); // 输出 Scott
 ```
 
-##### 枚举类型： enum
+### 枚举类型： enum
 
 枚举类型用户定义数值集合。
 
@@ -80,6 +80,7 @@ console.log(colorName); // 输出 Green
 ```
 
 编译后
+
 ```typescript
 var Color;
 (function (Color) {
@@ -103,7 +104,7 @@ Color: {
 }
 ```
 
-#### void类型: void
+### void类型: void
 
 用于表示方法返回值的类型,表示该方法没有返回值.
 
@@ -113,15 +114,15 @@ function hello(): void {
 }
 ```
 
-#### null类型: null
+### null类型: null
 
 表示对象值缺失.
 
-#### undefined类型: undefined
+### undefined类型: undefined
 
 用于初始化变量为一个未定义的值
 
-#### any类型: any
+### any类型: any
 
 任意值是 `TypeScript` 针对编程时类型不明确的变量使用的一种数据类型, 它常用于以下三种情况.
 
@@ -150,7 +151,7 @@ let arrayList: any[] = [1, false, 'fine'];
 arrayList[1] = 100; // 不会报错，因编译器不会检查
 ```
 
-#### never类型: never
+### never类型: never
 
 never是其他类型(包括 null 和 undefined)的子类型, 代表从不会出现的值。这意味着声明为never类型的变量只能被 never 类型所赋值， 在函数中它通常表现为抛出异常或无法执行到终止点（例如无限循环），示例代码：
 
